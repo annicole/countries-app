@@ -1,14 +1,25 @@
 
 ## TypeScript & React.js Developer Challenge
 
-node 18
+Requirements
+    node 18
 
-### `npm start`
+### Project setup
 
-### `npm test`
+Execute the following commands:
 
-### `npm run build`
+```
+git clonw https://github.com/annicole/countriesApp.git
+cd countriesApp
+npm install
+```
+
+## Running the project
+
+`npm start`
 
 
-### `npm run eject`
+## API Documentation
+- [Country API](https://restcountries.com/)
+
 

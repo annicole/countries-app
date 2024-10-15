@@ -10,7 +10,7 @@ import Footer from "components/Footer";
 function App() {
   const [countries, setCountries] = useState<CountryType[] | []>([]);
   const [originalData, setOriginalData] = useState<CountryType[] | []>([]);
-  const [page, setPage] = useState<number>(1);
+  const [currentPage, setCurrentPage] = useState<number>(1);
   const pageSize: number = 10;
 
   useEffect(() => {
@@ -23,18 +23,55 @@ function App() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    sortData("name");
+  }, [originalData]);
+
   const pageChange = (page: number) => {
-    const startSlice: number = pageSize  * (page -1);
+    const startSlice: number = pageSize * (page - 1);
     const endSlice: number = pageSize * page;
     setCountries(originalData.slice(startSlice, endSlice));
-    setPage(page);
+    setCurrentPage(page);
+  };
+
+  const sortData = (key: string) => {
+    const sortedData = originalData.sort((a, b) => {
+      let x = "";
+      let y = "";
+
+      if (key === "population") {
+        return a.population - b.population;
+      }
+
+      if (key === "name") {
+        x = a.name.common.toLowerCase();
+        y = b.name.common.toLowerCase();
+      }
+
+      if (key === "capital") {
+        x = a.capital[0].toLowerCase();
+        y = b.capital[0].toLowerCase();
+      }
+
+      if (x > y) {
+        return 1;
+      }
+      if (x < y) {
+        return -1;
+      }
+      return 0;
+    });
+
+    const startSlice: number = pageSize * (currentPage - 1);
+    const endSlice: number = pageSize * currentPage;
+    setCountries(sortedData.slice(startSlice, endSlice));
   };
 
   return (
     <div className="page-content">
       <Sidebar />
       <div className="container-body">
-        <Header />
+        <Header onSort={sortData} />
         <div className="countries-section">
           {countries?.map((country: CountryType, index: number) => (
             <CountryItem
@@ -48,7 +85,7 @@ function App() {
           ))}
         </div>
         <Footer
-          currentPage={page}
+          currentPage={currentPage}
           totalCount={originalData.length}
           onPageChange={pageChange}
         />

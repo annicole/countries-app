@@ -27,18 +27,18 @@ const CountryItem = ({
     <div className=" card card-country" onClick={changeState}>
       <div className="">
         <div className="row p-4">
-          <div className="col align-self-center">
+          <div className="col-2 align-self-center">
             <button type="button" className="btn btn-link text-muted">
               {isOpen ? <IoIosArrowDown /> : <IoIosArrowForward />}
             </button>
           </div>
-          <div className="col-8 d-flex justify-content-between align-items-center">
+          <div className="col-6 d-flex justify-content-between align-items-center">
             <span className="fs-4 fw-bold">{name}</span>
             <div>{capital}</div>
           </div>
-          <div className="col align-items-center justify-content-start p-3 d-flex">
+          <div className="col-4 align-items-center justify-content-end d-flex">
             <FaPeopleGroup />
-            <span className="badge text-bg-success ms-3">
+            <span className="badge bd-population text-bg-success ms-3">
               {formatBigNumber(population)}
             </span>
           </div>

@@ -9,12 +9,12 @@
     cursor: pointer;
 }
 
-.card-body{
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
 .icon{
     cursor: pointer;
+}
+
+.bd-population{
+    width: auto;
+    text-align: right !important;
+    min-width: 3rem;
 }

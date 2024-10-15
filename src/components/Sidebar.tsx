@@ -7,20 +7,20 @@ import "style/Sidebar.css";
 const Sidebar = () => {
   return (
     <nav className="nav-menu active">
-      <div className="header">
+      <div className="d-flex my-4 ms-3">
         <img src={logo} alt="logo" className="logo" />
       </div>
       <div className="nav-menu-items ">
         <li className="nav-item">
-          <MdHome size={"2em"} />
+          <MdHome size={"1em"} />
           <span>Home</span>
         </li>
         <li className="nav-item">
-          <MdOutlineToday size={"2em"} />
+          <MdOutlineToday size={"1em"} />
           <span>Dashbaord</span>
         </li>
         <li className="nav-item">
-          <MdPerson size={"2em"} />
+          <MdPerson size={"1em"} />
           <span>Profile</span>
         </li>
       </div>

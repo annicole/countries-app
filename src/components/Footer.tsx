@@ -19,41 +19,44 @@ const Footer = ({
   const lastPage = paginationRange[paginationRange.length - 1];
 
   return (
-    <div className="padding">
-      <nav>
-        <ul className="pagination d-flex justify-content-center flex-wrap pagination-rounded-flat pagination-success">
-          {currentPage !== 1 ? (
-            <li className="page-item">
-              <button
-                className="page-link"
-                onClick={() => onPageChange(currentPage - 1)}
-              >
-                <IoIosArrowBack />
-              </button>
-            </li>
-          ) : null}
-          {paginationRange.map((pageNumber: number) => (
-            <li
-              className={`page-item ${
-                pageNumber === currentPage ? "active" : ""
-              }`}
-              key={pageNumber}
+    <div className="pagination_rounded">
+      <ul className="pagination d-flex justify-content-center flex-wrap pagination-rounded-flat pagination-success">
+        {currentPage !== 1 ? (
+          <li className="page-item">
+            <button
+              className="page-link"
+              onClick={() => onPageChange(currentPage - 1)}
             >
-              <button onClick={()=> onPageChange(pageNumber)} className="page-link">{pageNumber}</button>
-            </li>
-          ))}
-          {currentPage !== lastPage ? (
-            <li className="page-item">
-              <button
-                className="page-link"
-                onClick={() => onPageChange(currentPage + 1)}
-              >
-                <IoIosArrowForward />
-              </button>
-            </li>
-          ) : null}
-        </ul>
-      </nav>
+              <IoIosArrowBack />
+            </button>
+          </li>
+        ) : null}
+        {paginationRange.map((pageNumber: number) => (
+          <li
+            className={`page-item ${
+              pageNumber === currentPage ? "active" : ""
+            }`}
+            key={pageNumber}
+          >
+            <button
+              onClick={() => onPageChange(pageNumber)}
+              className="page-link"
+            >
+              {pageNumber}
+            </button>
+          </li>
+        ))}
+        {currentPage !== lastPage ? (
+          <li className="page-item">
+            <button
+              className="page-link"
+              onClick={() => onPageChange(currentPage + 1)}
+            >
+              <IoIosArrowForward />
+            </button>
+          </li>
+        ) : null}
+      </ul>
     </div>
   );
 };

@@ -12,7 +12,7 @@ const Header = ({ onSort }: HeaderProps) => {
 
   return (
     <nav className="navbar navbar-expand-lg bg-dark w-75 z-3 p-3 position-fixed">
-      <div className="container-fluid">
+      <div className="container-fluid flex-nowrap">
         <h5 className="navbar-brand text-light">European Countries</h5>
         <div className="d-flex">
           <MdSort size={42} style={{ fill: "white" }} />

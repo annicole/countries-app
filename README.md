@@ -9,7 +9,7 @@ Requirements
 Execute the following commands:
 
 ```
-git clonw https://github.com/annicole/countriesApp.git
+git clone https://github.com/annicole/countriesApp.git
 cd countriesApp
 npm install
 ```

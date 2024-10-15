@@ -1,0 +1,20 @@
+.card-country{
+    margin-bottom: 1.5rem;
+    background-color: white;
+    border-color: #ddd;
+    border: 2px solid transparent;
+    box-shadow: 0 1px 3px #0000001a,0 1px 2px #0000000f;
+    border-radius: 5px;
+    height: 5rem;
+    cursor: pointer;
+}
+
+.card-body{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.icon{
+    cursor: pointer;
+}

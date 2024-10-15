@@ -1,0 +1,28 @@
+.pagination,
+ .jsgrid .jsgrid-pager {
+     display: flex;
+     padding-left: 0;
+     list-style: none;
+     border-radius: 0.25rem
+ }
+ 
+ .page-link {
+     color: black
+ }
+
+ .pagination.pagination-rounded-flat .page-item {
+     margin: 0 .25rem
+ }
+ 
+ .pagination-success .page-item.active .page-link,
+ a {
+     background: #00c689;
+     border-color: #00c689
+ }
+ 
+ .pagination.pagination-rounded-flat .page-item .page-link, a {
+    border: none;
+    color: black;
+}
+ 
+ 

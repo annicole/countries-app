@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/countriesApp/static/css/main.a4fcb1a2.css",
+    "main.js": "/countriesApp/static/js/main.ad2768a0.js",
+    "static/js/453.941d4355.chunk.js": "/countriesApp/static/js/453.941d4355.chunk.js",
+    "static/media/logo.png": "/countriesApp/static/media/logo.58ca035dc98312dbc391.png",
+    "index.html": "/countriesApp/index.html",
+    "main.a4fcb1a2.css.map": "/countriesApp/static/css/main.a4fcb1a2.css.map",
+    "main.ad2768a0.js.map": "/countriesApp/static/js/main.ad2768a0.js.map",
+    "453.941d4355.chunk.js.map": "/countriesApp/static/js/453.941d4355.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a4fcb1a2.css",
+    "static/js/main.ad2768a0.js"
+  ]
+}
